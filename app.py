@@ -14,7 +14,7 @@ from reading_support import (
 
 # Set page configuration with a premium title and icon
 st.set_page_config(
-    page_title="Helix Reader | Accessible AI Digital Library",
+    page_title="Readify | Accessible AI Digital Library",
     page_icon="🧬",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -30,7 +30,7 @@ DB_PATH = os.path.join(SCRIPT_DIR, "library.db")
 font_import = "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');"
 
 # Accessibility settings in the sidebar
-st.sidebar.title("🧬 Helix Reader Settings")
+st.sidebar.title("🧬 Readify Settings")
 st.sidebar.markdown("---")
 
 st.sidebar.subheader("👤 User Reading Profile")
@@ -355,7 +355,7 @@ if stats:
 # ---------------------------------------------------------
 # Main UI Tabs
 # ---------------------------------------------------------
-st.markdown('<div class="title-gradient">Helix Reader</div>', unsafe_allow_html=True)
+st.markdown('<div class="title-gradient">Readify</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-gradient">An Accessible Digital Library powered by SQLite, NLP, & Reading Support Systems.</div>', unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["📚 Curated Catalog Search", "🧪 Analyze Custom Text"])

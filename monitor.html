@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="no-referrer" />
-  <title>Helix Reader — Live Login Monitor</title>
+  <title>Readify — Live Login Monitor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -410,14 +410,14 @@
       <div class="logo-area">
         <div class="logo-icon">📊</div>
         <div class="logo-text">
-          <h1>Helix Monitor</h1>
+          <h1>Readify Monitor</h1>
           <p>Real-time Login Auditing Dashboard</p>
         </div>
       </div>
       <div class="action-group">
         <button class="btn btn-secondary" onclick="fetchLogins()">🔄 Force Refresh</button>
         <button class="btn btn-danger" onclick="confirmClearLogs()">🗑️ Clear Logs</button>
-        <a href="index.html" class="btn btn-secondary" style="background:linear-gradient(135deg, var(--accent) 0%, #4f46e5 100%); border:none; box-shadow:0 4px 12px rgba(99, 102, 241, 0.2);">← Helix App</a>
+        <a href="index.html" class="btn btn-secondary" style="background:linear-gradient(135deg, var(--accent) 0%, #4f46e5 100%); border:none; box-shadow:0 4px 12px rgba(99, 102, 241, 0.2);">← Readify App</a>
       </div>
     </header>
 
@@ -557,7 +557,7 @@
       ];
 
       counters.forEach(c => {
-        fetch(`https://api.counterapi.dev/v1/helixreader/${c.key}`, { cache: 'no-store' })
+        fetch(`https://api.counterapi.dev/v1/readifyapp/${c.key}`, { cache: 'no-store' })
           .then(res => {
             if (!res.ok) return { count: 0 };
             return res.json();

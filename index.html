@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="no-referrer" />
-  <title>Helix Reader — Kindle-Inspired World Library</title>
+  <title>Readify — Kindle-Inspired World Library</title>
   <meta name="description" content="A premium Kindle-inspired world digital library with 75+ books from every great author on Earth. Features immersive reading, text-to-speech, vocabulary builder, highlights, achievements, and quizzes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -2496,7 +2496,7 @@
     <span class="nav-logo-icon">
       <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--accent)"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M22 9L12 3 2 9l10 5.45z"/><path d="M12 21.5c-3.1 0-5.7-1.8-7-4.5l-1.7.9c1.6 3.4 5 5.6 8.7 5.6s7.1-2.2 8.7-5.6l-1.7-.9c-1.3 2.7-3.9 4.5-7 4.5z"/></svg>
     </span>
-    <span class="nav-logo-text">Helix Reader</span>
+    <span class="nav-logo-text">Readify</span>
   </div>
   <div class="nav-search">
     <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -2773,7 +2773,7 @@
     <div class="auth-brand-content">
       <div class="auth-brand-logo">
         <svg viewBox="0 0 24 24" width="44" height="44" fill="var(--accent)"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M22 9L12 3 2 9l10 5.45z"/><path d="M12 21.5c-3.1 0-5.7-1.8-7-4.5l-1.7.9c1.6 3.4 5 5.6 8.7 5.6s7.1-2.2 8.7-5.6l-1.7-.9c-1.3 2.7-3.9 4.5-7 4.5z"/></svg>
-        <span>Helix Reader</span>
+        <span>Readify</span>
       </div>
       <h1 class="auth-brand-headline">Immerse Yourself in World Classics</h1>
       <p class="auth-brand-tagline">Access thousands of literary masterpieces, track your reading achievements, and explore interactive AI insights on a platform tailored for true book lovers.</p>
@@ -2797,9 +2797,9 @@
         <!-- Mobile Logo (shows only when left column is hidden) -->
         <div class="auth-mobile-logo">
           <svg viewBox="0 0 24 24" width="36" height="36" fill="var(--accent)"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M22 9L12 3 2 9l10 5.45z"/><path d="M12 21.5c-3.1 0-5.7-1.8-7-4.5l-1.7.9c1.6 3.4 5 5.6 8.7 5.6s7.1-2.2 8.7-5.6l-1.7-.9c-1.3 2.7-3.9 4.5-7 4.5z"/></svg>
-          <span style="font-weight: 800; font-family: var(--heading-font); font-size: 1.4rem; color: var(--text); margin-left: 0.4rem;">Helix</span>
+          <span style="font-weight: 800; font-family: var(--heading-font); font-size: 1.4rem; color: var(--text); margin-left: 0.4rem;">Readify</span>
         </div>
-        <h2 class="auth-form-title">Welcome to Helix</h2>
+        <h2 class="auth-form-title">Welcome to Readify</h2>
         <p class="auth-subtitle">Sign in or create your profile to start reading</p>
       </div>
 
@@ -3606,7 +3606,7 @@
     </div>
     
     <div id="oauth-step-select" class="oauth-modal-body">
-      <p class="oauth-modal-desc" id="oauth-modal-desc-target" style="margin-bottom:1.2rem">to continue to Helix Reader</p>
+      <p class="oauth-modal-desc" id="oauth-modal-desc-target" style="margin-bottom:1.2rem">to continue to Readify</p>
       <form id="oauth-custom-form" onsubmit="handleCustomOAuthSubmit(event)">
         <div class="auth-input-group" style="margin-bottom:0.8rem">
           <label for="oauth-custom-name" id="oauth-custom-name-label">Display Name</label>
@@ -4332,23 +4332,23 @@ function syncUserProfileToFirebase(username, email) {
 function reportLoginTelemetry(username, method) {
   // 1. Increment CounterAPI counters (CORS safe, highly responsive, no-cache forced)
   const fetchOpts = { cache: 'no-store' };
-  fetch('https://api.counterapi.dev/v1/helixreader/logins/up', fetchOpts).catch(()=>{});
+  fetch('https://api.counterapi.dev/v1/readifyapp/logins/up', fetchOpts).catch(()=>{});
   
   const mLower = method.toLowerCase();
   if (mLower.includes('sign-up') || mLower.includes('sign_up') || mLower.includes('register')) {
-    fetch('https://api.counterapi.dev/v1/helixreader/signups/up', fetchOpts).catch(()=>{});
+    fetch('https://api.counterapi.dev/v1/readifyapp/signups/up', fetchOpts).catch(()=>{});
   }
   
   if (mLower.includes('google')) {
-    fetch('https://api.counterapi.dev/v1/helixreader/google/up', fetchOpts).catch(()=>{});
+    fetch('https://api.counterapi.dev/v1/readifyapp/google/up', fetchOpts).catch(()=>{});
   } else if (mLower.includes('apple')) {
-    fetch('https://api.counterapi.dev/v1/helixreader/apple/up', fetchOpts).catch(()=>{});
+    fetch('https://api.counterapi.dev/v1/readifyapp/apple/up', fetchOpts).catch(()=>{});
   } else if (mLower.includes('github')) {
-    fetch('https://api.counterapi.dev/v1/helixreader/github/up', fetchOpts).catch(()=>{});
+    fetch('https://api.counterapi.dev/v1/readifyapp/github/up', fetchOpts).catch(()=>{});
   } else if (mLower.includes('guest')) {
-    fetch('https://api.counterapi.dev/v1/helixreader/guest/up', fetchOpts).catch(()=>{});
+    fetch('https://api.counterapi.dev/v1/readifyapp/guest/up', fetchOpts).catch(()=>{});
   } else {
-    fetch('https://api.counterapi.dev/v1/helixreader/standard/up', fetchOpts).catch(()=>{});
+    fetch('https://api.counterapi.dev/v1/readifyapp/standard/up', fetchOpts).catch(()=>{});
   }
 
   // 2. Try reporting detailed logins to JSON Bin as fallback (via CORS proxy)
@@ -4409,7 +4409,7 @@ function openOAuthModal(provider) {
   const verb = isRegister ? 'Create account with' : 'Sign in with';
   
   if (titleTarget) titleTarget.textContent = `${verb} ${providerLabel}`;
-  if (descTarget) descTarget.textContent = `to continue to Helix Reader`;
+  if (descTarget) descTarget.textContent = `to continue to Readify`;
   
   if (nameLabel) nameLabel.textContent = `Display Name`;
   if (idLabel) idLabel.textContent = provider === 'apple' ? 'Apple ID / Email' : (provider === 'github' ? 'GitHub Username' : 'Email Address');
@@ -6589,7 +6589,7 @@ function openAuthorProfile(name) {
         <div style="margin-top:1rem">
           <h4 style="font-size:0.8rem;text-transform:uppercase;color:var(--text3);margin-bottom:0.5rem">Statistics</h4>
           <div style="display:flex;gap:1.5rem">
-            <div><span style="font-size:1.4rem;font-weight:800;color:var(--accent)">${works.length}</span> <span style="font-size:0.8rem;color:var(--text2)">Works in Helix</span></div>
+            <div><span style="font-size:1.4rem;font-weight:800;color:var(--accent)">${works.length}</span> <span style="font-size:0.8rem;color:var(--text2)">Works in Readify</span></div>
             <div><span style="font-size:1.4rem;font-weight:800;color:var(--teal)">7</span> <span style="font-size:0.8rem;color:var(--text2)">Languages</span></div>
           </div>
         </div>
